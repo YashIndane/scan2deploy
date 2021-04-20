@@ -30,6 +30,26 @@ Since I am running the code on Windows machine , Docker Desktop is required to g
 Download Docker Desktop from -> [link](https://docs.docker.com/docker-for-windows/install/)
 
 
+## Enviornment settings
+
+Docker Desktop-
+
+After opening Docker Desktop, provide your Docker Hub credentials so that pushing images happens smoothly.
+
+AWS-
+
+configure AWS-CLI by -
+```
+aws configure
+```
+
+Create a bucket in S3 (here the snap will be uploaded)
+
+```
+aws s3api create-bucket --bucket <bucket-name> --region <region-name> --create-bucket-configuration LocationConstraint=<region-name>
+```
+
+
 
 
 
