@@ -52,6 +52,7 @@ aws s3api create-bucket --bucket <bucket-name> --region <region-name> --create-b
 ## Working
 
 The image of your page is uploaded in the S3 bucket. This image is then processed by ```AWS Textract``` service, which extracts the text from it line by line.
+More on AWS Textract -> [link](https://aws.amazon.com/textract/)
 
 ```
 textract = boto3.client('textract')
