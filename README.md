@@ -25,7 +25,7 @@ pip install awscli
 ```
 
 Since I am running the code on Windows machine , Docker Desktop is required to get the docker enviornment for building and pushing images
-Download Docker Desktop from -> ![link](https://docs.docker.com/docker-for-windows/install/)
+Download Docker Desktop from -> [link](https://docs.docker.com/docker-for-windows/install/)
 
 
 
