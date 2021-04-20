@@ -4,7 +4,7 @@
 
 Just write down your docker file , take a snap and deploy the app in Kubernetes!
 
-[](s2d3.png)
+![](s2d3.png)
 
 ## Requirements
 
