@@ -49,7 +49,9 @@ Create a bucket in S3 (here the snap will be uploaded)
 aws s3api create-bucket --bucket <bucket-name> --region <region-name> --create-bucket-configuration LocationConstraint=<region-name>
 ```
 
-## Working
+Have the Kubernetes master key (.pem file) in the working directory, so that deployment can be made using ssh
+
+## Working and Usage
 
 The image of your page is uploaded in the S3 bucket. This image is then processed by ```AWS Textract``` service, which extracts the text from it line by line.
 More on AWS Textract -> [link](https://aws.amazon.com/textract/)
@@ -72,6 +74,21 @@ response = textract.detect_document_text(
 the lines are written in the Dockerfile, which is then used to build the ```container image``` and push it to Docker Hub.
 
 After pushing the image to Docker Hub, the code runs the command to create a deployment using the image pushed (using ssh) and expose it to create a service.
+
+To get the port number where the service is launched, go to the master node and run ->
+
+```
+kubectl get svc
+```
+
+To get the IP of  node on which the pod is launched run this ->
+
+```
+kubectl describe pod <name-of-pod>
+```
+
+The app can be accessed by ```http://<IP-of-node>:<port_no>```
+
 
 
 
