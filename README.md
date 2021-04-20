@@ -12,6 +12,8 @@ Install OpenCV by
 pip install opencv-python
 ```
 
+Do this if your Kubernetes cluster is running in aws ->
+
 Install boto3 (calls APIs of AWS services) by
 
 ```
