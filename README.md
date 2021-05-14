@@ -6,6 +6,8 @@ Just write down your docker file , take a snap and deploy the app in Kubernetes!
 
 ![](s2d3.png)
 
+[Demo Link](https://www.linkedin.com/posts/yash-indane-aa6534179_docker-kubernetes-python-activity-6790679076320382976-OrMT)
+
 ## Requirements
 
 Install OpenCV by
