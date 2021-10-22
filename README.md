@@ -13,7 +13,7 @@ Just write down your docker file , take a snap and deploy the app in Kubernetes!
 Install OpenCV by
 
 ```
-pip install opencv-python
+$ pip install opencv-python
 ```
 
 Do this if your Kubernetes cluster is running in aws ->
@@ -21,13 +21,13 @@ Do this if your Kubernetes cluster is running in aws ->
 Install boto3 (calls APIs of AWS services) by
 
 ```
-pip install boto3
+$ pip install boto3
 ```
 
 Install aws command line tool by
 
 ```
-pip install awscli
+$ pip install awscli
 ```
 
 Since I am running the code on Windows machine , Docker Desktop is required to get the docker enviornment for building and pushing images
@@ -44,13 +44,13 @@ AWS-
 
 configure AWS-CLI by -
 ```
-aws configure
+$ aws configure
 ```
 
 Create a bucket in S3 (here the snap will be uploaded)
 
 ```
-aws s3api create-bucket --bucket <bucket-name> --region <region-name> --create-bucket-configuration LocationConstraint=<region-name>
+$ aws s3api create-bucket --bucket <bucket-name> --region <region-name> --create-bucket-configuration LocationConstraint=<region-name>
 ```
 
 Have the Kubernetes master key (.pem file) in the working directory, so that deployment can be made using ssh
@@ -82,13 +82,13 @@ After pushing the image to Docker Hub, the code runs the command to create a dep
 To get the port number where the service is launched, go to the master node and run ->
 
 ```
-kubectl get svc
+$ kubectl get svc
 ```
 
 To get the IP of  node on which the pod is launched run this ->
 
 ```
-kubectl describe pod <name-of-pod>
+$ kubectl describe pod <name-of-pod>
 ```
 
 The app can be accessed by ```http://<IP-of-node>:<port_no>```
