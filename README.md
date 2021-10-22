@@ -60,7 +60,7 @@ Have the Kubernetes master key (.pem file) in the working directory, so that dep
 The image of your page is uploaded in the S3 bucket. This image is then processed by ```AWS Textract``` service, which extracts the text from it line by line.
 More on AWS Textract -> [link](https://aws.amazon.com/textract/)
 
-```
+```py
 textract = boto3.client('textract')
 
 response = textract.detect_document_text(
@@ -92,19 +92,3 @@ kubectl describe pod <name-of-pod>
 ```
 
 The app can be accessed by ```http://<IP-of-node>:<port_no>```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
