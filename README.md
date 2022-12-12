@@ -4,7 +4,7 @@
 
 Just write down your docker file , take a snap and deploy the app in Kubernetes!
 
-![](s2d3.png)
+![s2d3](https://user-images.githubusercontent.com/53041219/207027869-bf690f8b-ba7a-4d4f-ab9c-8d4a6468d1bd.png)
 
 [Demo Link](https://www.linkedin.com/posts/yash-indane-aa6534179_docker-kubernetes-python-activity-6790679076320382976-OrMT)
 
